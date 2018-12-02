@@ -12,3 +12,9 @@ https://drive.google.com/open?id=1a_PUHP07LI-JL-Jir1w8BaoIgWgo_vPQ
 To view the screenshot of the album list which will be finally displayed in the app, use the below given url:
 
 https://drive.google.com/open?id=1oQ-VjfM-H6NxW3jZkWRM5D7RiWePDtrf
+
+Future Advancements:
+
+1. This project can be moved to Kotlin.
+2. For offline storage, Sqlite database can be used.
+3. Android architecture components: Live Data and View model can be used.
