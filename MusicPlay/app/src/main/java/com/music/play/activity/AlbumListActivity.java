@@ -25,6 +25,7 @@ import com.music.play.utils.CommonUtils;
 import com.music.play.utils.ServiceBus;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class AlbumListActivity extends AppCompatActivity implements ApiFailureHandlerInterface{
 
@@ -101,6 +102,7 @@ public class AlbumListActivity extends AppCompatActivity implements ApiFailureHa
     public void albumListAvailable(ArrayList<Album> albumList) {
         progressDialog.dismiss();
         if(albumList != null) {
+            Collections.sort(albumList, Album.comparator);
             list.setAdapter(new AlbumListAdapter(this, albumList));
             prefs.edit().putString(CommonConstants.ALBUM_LIST_SP,mGson.toJson(albumList)).commit();
         }
